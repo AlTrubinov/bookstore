@@ -5,5 +5,17 @@
         <h2><a href="">{{ book.title }}</a></h2>
         <p>Author: {{ book.author }}</p>
         <p>Price: {{ book.price }}</p>
+        <div>
+            <h3>Reviews</h3>
+            <ul>
+                {% if book.reviews.exists %}
+                    {% for review in book.reviews.all %}
+                        <li>{{ review.review }} ({{ review.author }})</li>
+                    {% endfor %}
+                {% else %}
+                    <p>No review now.</p>
+                {% endif %}
+            </ul>
+        </div>
     </div>
 {% endblock content %}
