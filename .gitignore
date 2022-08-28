@@ -2,6 +2,7 @@
 .idea
 __pycache__/
 db.sqlite3
+docker-compose-prod.yml
 
 # Default ignored files
 /shelf/
